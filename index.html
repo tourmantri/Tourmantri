@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tourmantri - Modern Travel Agency & Booking Planner dashboard. Plan, book and schedule curated tours worldwide on your custom domain.">
+  <title>Tourmantri | Your Tour Designer</title>
+  
+  <!-- FontAwesome CDN for modern vector icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Style Sheets -->
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/dashboard.css">
+  <link rel="stylesheet" href="styles/modal.css">
+</head>
+<body>
+
+  <!-- Sticky Header & Nav -->
+  <header>
+    <!-- Upper Contact Details Header Bar -->
+    <div class="upper-head">
+      <div class="container upper-head-container">
+        <div class="upper-contact-info">
+          <a href="tel:+918200453651"><i class="fa-solid fa-phone"></i> +91 8200 453651</a>
+          <a href="mailto:infotourmantri@gmail.com"><i class="fa-solid fa-envelope"></i> infotourmantri@gmail.com</a>
+          <a href="mailto:info@tourmantri.com"><i class="fa-solid fa-envelope"></i> info@tourmantri.com</a>
+        </div>
+        <div class="upper-social-links">
+          <a href="#" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="container nav-container">
+      <a href="#hero" class="logo">
+        <img src="assets/logo.png" alt="Tour Mantri Logo" class="logo-img" data-light-src="assets/logo.png" data-dark-src="assets/logo.png">
+      </a>
+      
+      <nav class="nav-menu">
+        <a href="#hero" class="nav-link active">Home</a>
+        
+        <!-- Domestic Dropdown -->
+        <div class="nav-item-dropdown">
+          <a href="#destinations" class="nav-link">Domestic Tour <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+          <div class="dropdown-menu">
+            <a href="#destinations" class="dropdown-item" data-filter="domestic" data-dest="rajasthan">Rajasthan Heritage</a>
+            <a href="#destinations" class="dropdown-item" data-filter="domestic" data-dest="kashmir">Kashmir Valleys</a>
+            <a href="#destinations" class="dropdown-item" data-filter="domestic" data-dest="kerala">Kerala Backwaters</a>
+            <a href="#destinations" class="dropdown-item" data-filter="domestic" data-dest="goa">Goa Beaches</a>
+            <a href="#destinations" class="dropdown-item" data-filter="domestic" data-dest="maharashtra">Maharashtra Forts</a>
+            <a href="#destinations" class="dropdown-item" data-filter="domestic" data-dest="sikkim">Sikkim Valleys</a>
+            <a href="#destinations" class="dropdown-item" data-filter="domestic" data-dest="himachal">Himachal Escapes</a>
+            <a href="#destinations" class="dropdown-item" data-filter="domestic" data-dest="gujarat">Gujarat Culture</a>
+          </div>
+        </div>
+
+        <!-- International Dropdown -->
+        <div class="nav-item-dropdown">
+          <a href="#destinations" class="nav-link">International Tour <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+          <div class="dropdown-menu">
+            <a href="#destinations" class="dropdown-item" data-filter="international" data-dest="dubai">Dubai Luxury</a>
+            <a href="#destinations" class="dropdown-item" data-filter="international" data-dest="thailand">Thailand Explorer</a>
+            <a href="#destinations" class="dropdown-item" data-filter="international" data-dest="maldives">Maldives Bliss</a>
+            <a href="#destinations" class="dropdown-item" data-filter="international" data-dest="bali">Bali Sanctuary</a>
+            <a href="#destinations" class="dropdown-item" data-filter="international" data-dest="vietnam">Vietnam Cruise</a>
+          </div>
+        </div>
+
+        <!-- Day Tour Dropdown -->
+        <div class="nav-item-dropdown">
+          <a href="#destinations" class="nav-link">Day Tour <i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+          <div class="dropdown-menu">
+            <a href="#destinations" class="dropdown-item" data-filter="day-tours" data-dest="polo-forest">Polo Forest Hike</a>
+            <a href="#destinations" class="dropdown-item" data-filter="day-tours" data-dest="bakor">Bakor Camping</a>
+          </div>
+        </div>
+
+        <a href="#features" class="nav-link">Benefits</a>
+        <a href="#testimonials" class="nav-link">Reviews</a>
+      </nav>
+      
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Color Theme">☀️</button>
+        <a href="#dashboard" class="btn-primary nav-dashboard">My Dashboard</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HOME VIEW GROUP -->
+  <main class="home-view-group">
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>Journey Beyond Your <br><span>Imagination</span></h1>
+          <p>Discover stunning landscapes, unique cultural histories, and curated travel experiences designed just for you. Explore the world with comfort and style.</p>
+          <a href="#destinations" class="btn-primary" style="padding: 14px 28px; font-size: 1rem; box-shadow: var(--shadow-glow);">Explore Packages</a>
+        </div>
+        
+        <div class="hero-image-wrapper">
+          <div class="hero-slideshow">
+            <img src="assets/tajmahal.jpg" alt="Taj Mahal, India" class="hero-slide active" onerror="this.src='https://images.unsplash.com/photo-1548013146-72479768bada?w=800&auto=format&fit=crop&q=80'">
+            <img src="assets/kashmir.jpg" alt="Kashmir Valleys, India" class="hero-slide" onerror="this.src='https://images.unsplash.com/photo-1566837945700-30057527ade0?w=800&auto=format&fit=crop&q=80'">
+            <img src="assets/kerala.jpg" alt="Kerala Backwaters, India" class="hero-slide" onerror="this.src='https://images.unsplash.com/photo-1593693397690-362cb9666fc2?w=800&auto=format&fit=crop&q=80'">
+            <img src="assets/maldives.jpg" alt="Maldives Overwater Villas" class="hero-slide" onerror="this.src='https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&auto=format&fit=crop&q=80'">
+            <img src="assets/dubai.jpg" alt="Dubai Luxury Skyline" class="hero-slide" onerror="this.src='https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&auto=format&fit=crop&q=80'">
+          </div>
+          
+          <div class="hero-badge badge-1">
+            <div class="hero-badge-icon"><i class="fa-solid fa-star"></i></div>
+            <div class="hero-badge-text">
+              <h4>4.9 / 5.0 Rating</h4>
+              <p>Over 1,200 verified reviews</p>
+            </div>
+          </div>
+
+          <div class="hero-badge badge-2">
+            <div class="hero-badge-icon"><i class="fa-solid fa-plane"></i></div>
+            <div class="hero-badge-text">
+              <h4>50k+ Travelers</h4>
+              <p>Exploring the world safely</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search/Filter Panel Overlay -->
+    <div class="container">
+      <div class="search-panel">
+        <form id="hero-search-form" class="search-form">
+          <div class="search-field">
+            <label for="search-dest">Destination</label>
+            <div class="search-input-wrapper">
+              <i class="fa-solid fa-location-dot search-input-icon"></i>
+              <select id="search-dest" class="search-select">
+                <option value="">Where would you like to go?</option>
+                <option value="rajasthan">Rajasthan, India</option>
+                <option value="kashmir">Kashmir, India</option>
+                <option value="kerala">Kerala, India</option>
+                <option value="goa">Goa Beaches</option>
+                <option value="maharashtra">Maharashtra Forts</option>
+                <option value="sikkim">Sikkim Himalayas</option>
+                <option value="himachal">Himachal Pradesh</option>
+                <option value="gujarat">Gujarat Culture</option>
+                <option value="dubai">Dubai, UAE</option>
+                <option value="thailand">Thailand</option>
+                <option value="maldives">Maldives</option>
+                <option value="vietnam">Vietnam</option>
+                <option value="polo-forest">Polo Forest Day Hike</option>
+                <option value="bakor">Bakor Camping Day Trip</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="search-field">
+            <label for="search-date">Departure Date</label>
+            <div class="search-input-wrapper">
+              <i class="fa-solid fa-calendar-days search-input-icon"></i>
+              <input type="date" id="search-date" class="search-date-input">
+            </div>
+          </div>
+
+          <div class="search-field">
+            <label for="search-guests">Travelers</label>
+            <div class="search-input-wrapper">
+              <i class="fa-solid fa-users search-input-icon"></i>
+              <select id="search-guests" class="search-select">
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5+ Guests</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary btn-search">
+            <i class="fa-solid fa-magnifying-glass"></i> Search Tours
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Agency Benefits / Features -->
+    <section id="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Benefits</span>
+          <h2 class="section-title">Ultimate Travel Confidence</h2>
+        </div>
+        
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3>100% Secure Checkout</h3>
+            <p>Your transactions are encrypted with absolute safety protocol, protecting your payment details.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box"><i class="fa-solid fa-headset"></i></div>
+            <h3>Always Here for You</h3>
+            <p>From booking to your safe return, our team provides round-the-clock assistance to ensure your trip is smooth, stress-free, and memorable.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box"><i class="fa-solid fa-map-location-dot"></i></div>
+            <h3>Expert Guide Curation</h3>
+            <p>Every itinerary is verified by local explorers, offering deep immersion into hidden gems.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Destinations Grid & Filters -->
+    <section id="destinations">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Destinations</span>
+          <h2 class="section-title">Our Featured Packages</h2>
+        </div>
+
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-filter="all">All Packages</button>
+          <button class="filter-btn" data-filter="domestic">Domestic Tours</button>
+          <button class="filter-btn" data-filter="international">International Tours</button>
+          <button class="filter-btn" data-filter="day-tours">Day Tours</button>
+        </div>
+
+        <div id="packages-grid" class="destinations-grid">
+          <!-- Dynamic cards injected via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Slider -->
+    <section id="testimonials" class="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Testimonials</span>
+          <h2 class="section-title">What Travelers Say</h2>
+        </div>
+
+        <div class="testimonials-slider">
+          <div id="testimonials-track" class="testimonials-track">
+            <div class="testimonial-slide">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-quote">"The itinerary built for Zermatt was absolutely flawless. The custom activity schedules on my dashboard let me adjust my hiking plans on the fly!"</p>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&auto=format&fit=crop&q=80" alt="Marcus Thompson" class="author-img">
+                <h4 class="author-name">Sarah Jenkins</h4>
+                <p class="author-role">Adventure Blogger</p>
+              </div>
+            </div>
+
+            <div class="testimonial-slide">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-quote">"Tour Mantri is the most beautiful travel page I have ever used. Booking was seamless, and managing tickets on my domain was exceptionally easy."</p>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&auto=format&fit=crop&q=80" alt="Sarah Jenkins" class="author-img">
+                <h4 class="author-name">Marcus Thompson</h4>
+                <p class="author-role">Digital Nomad</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-controls">
+            <button id="slider-prev" class="slider-btn" aria-label="Previous Review"><i class="fa-solid fa-chevron-left"></i></button>
+            <button id="slider-next" class="slider-btn" aria-label="Next Review"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- USER DASHBOARD VIEW LAYOUT -->
+  <div id="dashboard-view" class="view-section">
+    <div class="dashboard-layout">
+      <!-- Sidebar -->
+      <aside class="dashboard-sidebar">
+        <div class="sidebar-profile">
+          <div class="sidebar-avatar-wrapper">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80" alt="Elena Rostova" class="sidebar-avatar">
+          </div>
+          <h4 class="sidebar-profile-name">Elena Rostova</h4>
+          <span class="sidebar-profile-tag">Explorer Elite</span>
+        </div>
+
+        <nav class="sidebar-menu">
+          <div class="sidebar-item active" data-section="overview">
+            <i class="fa-solid fa-chart-line"></i> Overview
+          </div>
+          <div class="sidebar-item" data-section="bookings">
+            <i class="fa-solid fa-suitcase"></i> My Bookings
+          </div>
+          <div class="sidebar-item" data-section="wishlist">
+            <i class="fa-solid fa-heart"></i> Saved Wishlist
+          </div>
+          <div class="sidebar-item" data-section="itinerary">
+            <i class="fa-solid fa-route"></i> Travel Itineraries
+          </div>
+          <div class="sidebar-item" data-section="settings">
+            <i class="fa-solid fa-user-gear"></i> Profile Settings
+          </div>
+        </nav>
+
+        <div class="sidebar-footer">
+          <a href="#hero" class="sidebar-item" onclick="location.reload();">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i> Exit Dashboard
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Panel Workspace -->
+      <main class="dashboard-main">
+        
+        <!-- Tab: Overview -->
+        <section id="overview-section" class="dashboard-section active">
+          <div class="dashboard-title-box">
+            <h2 class="dashboard-title">Welcome Back, Elena!</h2>
+            <p class="dashboard-subtitle">Here is a summary of your upcoming adventures and loyalty stats.</p>
+          </div>
+
+          <!-- Quick Metrics Tiles -->
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fa-solid fa-suitcase"></i></div>
+              <div class="stat-info">
+                <span class="stat-label">Active Bookings</span>
+                <span class="stat-value" id="stat-bookings-count">0</span>
+                <span class="stat-trend up">Confirmed</span>
+              </div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fa-solid fa-heart"></i></div>
+              <div class="stat-info">
+                <span class="stat-label">Wishlisted Items</span>
+                <span class="stat-value" id="stat-wishlist-count">0</span>
+                <span class="stat-trend">Tours Saved</span>
+              </div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fa-solid fa-award"></i></div>
+              <div class="stat-info">
+                <span class="stat-label">Travel Points</span>
+                <span class="stat-value" id="stat-points">0</span>
+                <span class="stat-trend up">Tier: Gold Elite</span>
+              </div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fa-solid fa-wallet"></i></div>
+              <div class="stat-info">
+                <span class="stat-label">Total Expended</span>
+                <span class="stat-value" id="stat-spent">₹0</span>
+                <span class="stat-trend">Calculated Total</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chart & Countdown Layout Grid -->
+          <div class="dashboard-grid">
+            <div class="chart-card">
+              <div class="card-header-flex">
+                <h3>Travel Spending Trend</h3>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Last 6 Months (USD)</span>
+              </div>
+              <div class="chart-container" id="travel-svg-container">
+                <!-- Custom SVG Graph dynamic elements -->
+              </div>
+            </div>
+
+            <div class="countdown-banner" id="upcoming-countdown-banner" style="display: none;">
+              <div>
+                <h3 class="countdown-title">Next Adventure</h3>
+                <p class="countdown-subtitle" id="countdown-dest-title">Bali Sanctuary Haven</p>
+              </div>
+              <div class="countdown-timer">
+                <div class="timer-box">
+                  <span class="timer-num" id="timer-days">00</span>
+                  <span class="timer-lbl">Days</span>
+                </div>
+                <div class="timer-box">
+                  <span class="timer-num" id="timer-hours">00</span>
+                  <span class="timer-lbl">Hrs</span>
+                </div>
+                <div class="timer-box">
+                  <span class="timer-num" id="timer-mins">00</span>
+                  <span class="timer-lbl">Mins</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tab: My Bookings -->
+        <section id="bookings-section" class="dashboard-section">
+          <div class="dashboard-title-box">
+            <h2 class="dashboard-title">My Travel Bookings</h2>
+            <p class="dashboard-subtitle">Manage, view invoices, download boarding passes, and reschedule trips.</p>
+          </div>
+          
+          <div class="bookings-table-wrapper">
+            <table class="bookings-table">
+              <thead>
+                <tr>
+                  <th>Destination</th>
+                  <th>Departure Date</th>
+                  <th>Duration</th>
+                  <th>Guests</th>
+                  <th>Price Paid</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="bookings-table-body">
+                <!-- Injected row elements -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Tab: Wishlist -->
+        <section id="wishlist-section" class="dashboard-section">
+          <div class="dashboard-title-box">
+            <h2 class="dashboard-title">Saved Wishlist Packages</h2>
+            <p class="dashboard-subtitle">Explore destinations you have saved. Ready to book your next escape?</p>
+          </div>
+
+          <div id="wishlist-grid" class="destinations-grid">
+            <!-- Wishlisted items cards dynamic layout -->
+          </div>
+        </section>
+
+        <!-- Tab: Itinerary Planner -->
+        <section id="itinerary-section" class="dashboard-section">
+          <div class="dashboard-title-box">
+            <h2 class="dashboard-title">Interactive Travel Itinerary Planner</h2>
+            <p class="dashboard-subtitle">Plan and schedule day-by-day activities for your booked trips.</p>
+          </div>
+
+          <div class="itinerary-selector-box">
+            <label for="itinerary-booking-select" style="font-weight: 700; margin-right: 12px; font-size: 0.95rem;">Select Booked Trip:</label>
+            <select id="itinerary-booking-select" class="form-control" style="display: inline-block; width: auto;">
+              <!-- Bookings list options -->
+            </select>
+            
+            <button class="btn-primary" id="btn-add-activity" style="display: none; margin-top: 10px; float: right;">
+              <i class="fa-solid fa-plus"></i> Add Day Activity
+            </button>
+          </div>
+
+          <div class="itinerary-layout">
+            <div class="itinerary-days-wrapper" id="itinerary-days-container">
+              <!-- Collapsible days items injected here -->
+            </div>
+            
+            <div class="list-card">
+              <h3 style="font-family: var(--font-heading); font-size: 1.15rem; margin-bottom: 16px;">Itinerary Suggestions</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 16px;">Get the most out of your excursions with local curator guidelines:</p>
+              <ul style="display: flex; flex-direction: column; gap: 14px; font-size: 0.85rem; color: var(--text-secondary);">
+                <li><i class="fa-solid fa-lightbulb" style="color:var(--accent); margin-right:8px;"></i> <strong>Morning Exploration:</strong> Beat crowds by checking out landmarks before 10 AM.</li>
+                <li><i class="fa-solid fa-lightbulb" style="color:var(--accent); margin-right:8px;"></i> <strong>Local Dining:</strong> Skip primary tourist strips; walk three blocks inland for traditional dishes.</li>
+                <li><i class="fa-solid fa-lightbulb" style="color:var(--accent); margin-right:8px;"></i> <strong>Hydration & Weather:</strong> Pack lightweight layers, dynamic footwear, and an offline regional map.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tab: Profile Settings -->
+        <section id="settings-section" class="dashboard-section">
+          <div class="dashboard-title-box">
+            <h2 class="dashboard-title">Profile Settings</h2>
+            <p class="dashboard-subtitle">Modify your traveler information, tier notifications, and travel preferences.</p>
+          </div>
+
+          <div class="list-card" style="max-width: 800px;">
+            <form id="profile-settings-form">
+              <div class="profile-form-grid">
+                <div class="form-group">
+                  <label for="profile-name">Full Name</label>
+                  <input type="text" id="profile-name" class="form-control" value="Elena Rostova">
+                </div>
+
+                <div class="form-group">
+                  <label for="profile-email">Email Address</label>
+                  <input type="email" id="profile-email" class="form-control" value="elena.rostova@tourmantri.com">
+                </div>
+
+                <div class="form-group">
+                  <label for="profile-avatar-select">Select Avatar Pic</label>
+                  <select id="profile-avatar-select" class="form-control">
+                    <option value="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80">Elena (Traveler Profile)</option>
+                    <option value="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&auto=format&fit=crop&q=80">Audrey (Adventure Specialist)</option>
+                    <option value="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80">Marcus (Nomad Host)</option>
+                  </select>
+                </div>
+
+                <div class="form-group" style="grid-column: span 2;">
+                  <label style="margin-bottom: 12px; display: block;">Travel Style Preferences</label>
+                  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px;">
+                    <label style="display: flex; align-items: center; gap: 8px; font-weight: normal; cursor: pointer;">
+                      <input type="checkbox" name="pref-beach" checked> Beach & Coastal Getaways
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 8px; font-weight: normal; cursor: pointer;">
+                      <input type="checkbox" name="pref-adventure" checked> Mountaineering & Outdoor Adventure
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 8px; font-weight: normal; cursor: pointer;">
+                      <input type="checkbox" name="pref-cultural"> Ancient Cities & Cultural Heritage
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 8px; font-weight: normal; cursor: pointer;">
+                      <input type="checkbox" name="pref-wellness"> Eco Retreats & Spa Wellness
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="profile-actions">
+                <button type="button" class="btn-primary" style="background-color: transparent; color: var(--text-secondary); border: 1px solid var(--border-color);" onclick="location.reload();">Discard Changes</button>
+                <button type="submit" class="btn-primary">Save Profile Info</button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Global Footer -->
+  <footer class="home-view-group">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <img src="assets/logo.png" alt="Tour Mantri Logo" class="logo-img" data-light-src="assets/logo.png" data-dark-src="assets/logo.png">
+        </a>
+        <p>Providing premium curations of boutique travels, custom itineraries, and high-altitude adventures globally.</p>
+        <div class="social-links">
+          <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="#hero" class="footer-link">Home</a></li>
+          <li><a href="#features" class="footer-link">Benefits</a></li>
+          <li><a href="#destinations" class="footer-link">Destinations</a></li>
+          <li><a href="#testimonials" class="footer-link">Reviews</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Destinations</h4>
+        <ul class="footer-links">
+          <li><a href="#destinations" class="footer-link">Rajasthan Heritage</a></li>
+          <li><a href="#destinations" class="footer-link">Kashmir Paradise</a></li>
+          <li><a href="#destinations" class="footer-link">Kerala Backwaters</a></li>
+          <li><a href="#destinations" class="footer-link">Dubai Luxury</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column footer-column-large footer-contact">
+        <h4>Contact Us</h4>
+        <ul class="footer-contact-list">
+          <li class="footer-contact-item">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <span>First Floor 106, Pavitra Enclave,<br>Opp Kataria Service center,<br>Mansarovar road, Tragad,<br>Ahmedabad - 382424</span>
+          </li>
+          <li class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+918200453651" class="footer-link">+91 8200 453651</a>
+          </li>
+          <li class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:infotourmantri@gmail.com" class="footer-link">infotourmantri@gmail.com</a>
+          </li>
+          <li class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:info@tourmantri.com" class="footer-link">info@tourmantri.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Tourmantri Travel Inc. All rights reserved. Created for premium travelers.</p>
+      <p>Terms of Service | Privacy Policy</p>
+    </div>
+  </footer>
+
+  <!-- GLASSMORPHIC BOOKING MODAL -->
+  <div id="booking-modal" class="modal-overlay">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 id="modal-package-title">Book Tour</h3>
+        <button class="modal-close-btn" aria-label="Close booking modal">&times;</button>
+      </div>
+      <form id="booking-form" class="booking-form">
+        <div class="form-group">
+          <label for="booking-name">Full Name</label>
+          <input type="text" id="booking-name" class="form-control" placeholder="e.g. Elena Rostova" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="booking-email">Email Address</label>
+          <input type="email" id="booking-email" class="form-control" placeholder="e.g. elena@example.com" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="booking-date">Departure Date</label>
+            <input type="date" id="booking-date" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="booking-guests">Traveler Guests</label>
+            <input type="number" id="booking-guests" class="form-control" min="1" max="10" value="1" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="booking-duration">Trip Duration (Days)</label>
+          <input type="number" id="booking-duration" class="form-control" min="2" max="30" value="7" required>
+        </div>
+
+        <!-- Dynamic pricing calculator details -->
+        <div class="pricing-summary">
+          <div class="pricing-row">
+            <span>Base price rate calculation:</span>
+            <span id="summary-base-price">₹0</span>
+          </div>
+          <div class="pricing-row">
+            <span>Service fees (8% tax rate):</span>
+            <span id="summary-service-fee">₹0</span>
+          </div>
+          <div class="pricing-row total">
+            <span>Estimated Total:</span>
+            <span id="summary-total-price">₹0</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-book-confirm"><i class="fa-brands fa-whatsapp"></i> Confirm & Send WhatsApp Inquiry</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- WhatsApp Floating Widget -->
+  <div class="whatsapp-float">
+    <a href="https://wa.me/918200453651?text=Hi!%20I%20am%20interested%20in%20planning%20a%20trip%20with%20Tourmantri." target="_blank" class="whatsapp-btn" aria-label="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span class="whatsapp-tooltip">Chat with us</span>
+    </a>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+</body>
+</html>
